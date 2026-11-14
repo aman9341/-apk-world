@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+*-backup.html
+index-before-*.html
+index-pre-*.html
+*-backup.*
+*-before-premium.*
+*-hero-backup.*

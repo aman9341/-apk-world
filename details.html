@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090711">
+    <title>App Details | MOD APK WORLD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="brand">
+            <img class="brand-icon" src="images/mw-logo.svg" alt="MW Crown Logo">
+            <div class="logo">MOD APK <span>WORLD</span></div>
+        </a>
+        <a class="telegram-btn" href="https://t.me/modapkworldno1"
+           target="_blank" rel="noopener noreferrer">✈ Telegram</a>
+    </header>
+
+    <main>
+        <a class="back-link" href="index.html">← Back to Home</a>
+
+        <section class="detail-card">
+            <div class="detail-icon" id="appIcon">APP</div>
+            <h2 id="appName">Loading...</h2>
+            <p id="appCategory"></p>
+            <p id="appRating"></p>
+            <div class="detail-divider"></div>
+            <h3>About this app</h3>
+            <p id="appDescription"></p>
+            <p class="version-text" id="appVersion"></p>
+
+            <section class="screenshots-section">
+                <h3>App Screenshots</h3>
+                <div id="appScreenshotsGallery" class="screenshots-gallery"></div>
+            </section>
+
+            <a id="downloadButton" class="download-btn disabled"
+               aria-disabled="true">Download link coming soon</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 MOD APK WORLD</p>
+        <p>All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/apps.js"></script>
+    <script src="js/details.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090711">
+<title>Admin Dashboard | MOD APK WORLD</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <a href="index.html" class="brand">
+    <img class="brand-icon" src="images/mw-logo.svg" alt="MW Logo">
+    <div class="logo">MOD APK <span>WORLD</span></div>
+  </a>
+  <a href="index.html" class="telegram-btn">View Website</a>
+</header>
+
+<main>
+  <section class="admin-heading">
+    <p class="hero-tag">CONTROL CENTER</p>
+    <h1>Admin <span>Dashboard</span></h1>
+    <p>Manage your authorized app listings</p>
+  </section>
+
+  <section class="admin-panel" id="loginPanel">
+    <h2>Admin Login</h2>
+    <p id="loginMessage" class="admin-note">Login with your authorized admin account.</p>
+    <form id="loginForm">
+      <label for="adminEmail">Email</label>
+      <input id="adminEmail" type="email" placeholder="Admin email" required>
+      <label for="adminPassword">Password</label>
+      <input id="adminPassword" type="password" placeholder="Password" required>
+      <button class="admin-submit" type="submit">Login</button>
+    </form>
+  </section>
+
+  <section id="dashboard" hidden>
+    <section class="admin-panel">
+      <div class="admin-top">
+        <h2>App Management</h2>
+        <button id="logoutBtn" type="button" class="admin-secondary">Logout</button>
+      </div>
+      <p id="adminStatus" class="admin-note">Checking admin access...</p>
+    </section>
+
+    <section class="admin-panel">
+      <h2 id="formTitle">Add New App</h2>
+      <form id="appForm">
+        <input id="appId" type="hidden">
+
+        <label for="appName">App Name</label>
+        <input id="appName" type="text" placeholder="Enter app name" required>
+
+        <label for="appCategory">Category</label>
+        <select id="appCategory" required>
+          <option value="">Select category</option>
+          <option>Entertainment</option>
+          <option>Tools</option>
+          <option>Games</option>
+          <option>Social</option>
+        </select>
+
+        <label for="appVersion">Version</label>
+        <input id="appVersion" type="text" placeholder="e.g. 1.0">
+
+        <label for="appIcon">App Icon URL</label>
+        <input id="appIcon" type="url" placeholder="https://example.com/icon.png">
+<div id="iconPreviewBox" hidden style="margin:12px 0;">
+  <p>Icon Preview:</p>
+  <img id="iconPreview" alt="App icon preview"
+       style="width:90px;height:90px;object-fit:cover;border-radius:16px;">
+  <p id="iconPreviewMessage" class="admin-note"></p>
+</div>
+
+        <label for="appDescription">Description</label>
+        <textarea id="appDescription" rows="4" placeholder="Write app description"></textarea>
+
+        <label for="appScreenshots">App Screenshots URLs</label>
+        <textarea id="appScreenshots" rows="4"
+          placeholder="Paste one image URL per line"></textarea>
+        <p class="admin-note">Add one direct image URL per line.</p>
+
+        <label for="downloadLink">Authorized Download Link</label>
+        <input id="downloadLink" type="url" placeholder="https://example.com/download">
+
+        <button class="admin-submit" id="saveBtn" type="submit">Save App</button>
+        <button class="admin-secondary" id="cancelEdit" type="button" hidden>Cancel Edit</button>
+      </form>
+      <p id="appMessage" class="admin-note" aria-live="polite"></p>
+    </section>
+
+    <section class="admin-panel">
+      <h2>Published Apps</h2>
+      <div id="adminApps">Loading apps...</div>
+    </section>
+  </section>
+</main>
+
+<footer><p>© 2026 MOD APK WORLD</p></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,724 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #090711;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    height: 65px;
+    padding: 0 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #110d1c;
+    border-bottom: 1px solid #292039;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: #a855f7;
+}
+
+.menu-btn {
+    background: #211631;
+    color: white;
+    border: 1px solid #63349a;
+    border-radius: 7px;
+    padding: 7px 12px;
+    font-size: 20px;
+}
+
+main {
+    max-width: 850px;
+    margin: auto;
+    padding: 18px;
+}
+
+.search-section {
+    text-align: center;
+    padding: 30px 5px;
+}
+
+.search-section h2 {
+    font-size: 25px;
+    margin-bottom: 9px;
+}
+
+.search-section p {
+    color: #a9a0b8;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.search-box {
+    display: flex;
+    gap: 8px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    background: #171221;
+    color: white;
+    border: 1px solid #45305f;
+    border-radius: 8px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #a855f7;
+}
+
+.search-box button {
+    padding: 0 16px;
+    background: #9333ea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.categories,
+.apps-section {
+    margin-top: 25px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.category-list {
+    display: flex;
+    gap: 9px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.category-list button {
+    white-space: nowrap;
+    padding: 9px 15px;
+    border: 1px solid #37264c;
+    background: #171221;
+    color: #ddd3eb;
+    border-radius: 20px;
+}
+
+.category-list button.active {
+    background: #9333ea;
+    border-color: #9333ea;
+    color: white;
+}
+
+.apps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.app-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px;
+    background: #15111e;
+    border: 1px solid #30223e;
+    border-radius: 10px;
+}
+
+.app-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: #292039;
+}
+
+.app-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.app-info h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.app-info p {
+    color: #aaa0b5;
+    font-size: 12px;
+}
+
+.details-btn {
+    padding: 8px 12px;
+    background: #7124b9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.loading {
+    color: #a9a0b8;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 35px;
+    border-top: 1px solid #292039;
+    color: #94899f;
+    font-size: 12px;
+    line-height: 2;
+}
+
+@media (max-width: 400px) {
+    .app-card {
+        gap: 9px;
+        padding: 10px;
+    }
+
+    .app-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .details-btn {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+}
+
+/* Brand Logo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #a855f7, #581c87);
+    border: 1px solid #c084fc;
+    box-shadow: 0 0 14px #9333ea66;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.telegram-btn {
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #229ed9;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.telegram-btn:active {
+    opacity: 0.8;
+}
+
+@media (max-width: 380px) {
+    .logo {
+        font-size: 16px;
+    }
+
+    .telegram-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+/* App Details Page */
+.back-link {
+    display: inline-block;
+    color: #c084fc;
+    text-decoration: none;
+    margin: 12px 0 20px;
+}
+
+.detail-card {
+    background: #15111e;
+    border: 1px solid #45305f;
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+}
+
+.detail-icon {
+    width: 90px;
+    height: 90px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 18px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #9333ea, #3b0764);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.detail-card h2 {
+    margin-bottom: 10px;
+}
+
+.detail-card p {
+    color: #b9aec7;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.detail-divider {
+    height: 1px;
+    background: #392849;
+    margin: 22px 0;
+}
+
+.version-text {
+    font-size: 13px;
+}
+
+.download-btn {
+    display: block;
+    margin-top: 24px;
+    padding: 14px;
+    border-radius: 9px;
+    background: #9333ea;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download-btn.disabled {
+    background: #393142;
+    color: #b9aec7;
+    pointer-events: none;
+}
+
+/* App Details Page */
+.back-link {
+    display: inline-block;
+    color: #c084fc;
+    text-decoration: none;
+    margin: 12px 0 20px;
+}
+
+.detail-card {
+    background: #15111e;
+    border: 1px solid #45305f;
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+}
+
+.detail-icon {
+    width: 90px;
+    height: 90px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 18px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #9333ea, #3b0764);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.detail-card h2 {
+    margin-bottom: 10px;
+}
+
+.detail-card p {
+    color: #b9aec7;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.detail-divider {
+    height: 1px;
+    background: #392849;
+    margin: 22px 0;
+}
+
+.version-text {
+    font-size: 13px;
+}
+
+.download-btn {
+    display: block;
+    margin-top: 24px;
+    padding: 14px;
+    border-radius: 9px;
+    background: #9333ea;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download-btn.disabled {
+    background: #393142;
+    color: #b9aec7;
+    pointer-events: none;
+}
+
+.brand-icon {
+    object-fit: contain;
+    padding: 2px;
+}
+
+.brand-icon {
+    object-fit: contain;
+    padding: 2px;
+}
+
+
+/* Neon Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 48px 18px;
+    margin: 12px 0 25px;
+    border: 1px solid #62358c;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #211033, #100a1c 65%, #26103c);
+}
+
+.hero-glow {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: #9333ea;
+    filter: blur(100px);
+    opacity: .35;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-tag {
+    position: relative;
+    color: #d8a4ff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.hero-section h1 {
+    position: relative;
+    font-size: clamp(27px, 7vw, 42px);
+    margin: 17px 0 12px;
+    line-height: 1.2;
+}
+
+.hero-section h1 span {
+    display: block;
+    color: #c084fc;
+    text-shadow: 0 0 18px #9333ea;
+}
+
+.hero-section p {
+    position: relative;
+    color: #c2b5d1;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 420px;
+    margin: 0 auto 23px;
+}
+
+.hero-telegram {
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(100deg, #9333ea, #6b21a8);
+    border: 1px solid #c084fc;
+    border-radius: 9px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 18px #9333ea55;
+}
+
+/* Premium Neon App Cards */
+.apps-list {
+    gap: 16px;
+}
+
+.app-card {
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+    gap: 14px;
+    background: linear-gradient(135deg, #1b1228, #100c18);
+    border: 1px solid #493064;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px #00000035;
+    transition: border-color .25s, box-shadow .25s, transform .25s;
+}
+
+.app-card:hover {
+    border-color: #a855f7;
+    box-shadow: 0 0 18px #9333ea45;
+    transform: translateY(-2px);
+}
+
+.app-icon {
+    flex-shrink: 0;
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #a855f7, #4c1d95);
+    border: 1px solid #c084fc;
+    color: white;
+    font-size: 17px;
+    font-weight: 900;
+    box-shadow: 0 0 13px #9333ea55;
+}
+
+.app-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.app-info h4 {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.app-info p {
+    color: #bba9ce;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 3px;
+}
+
+.details-btn {
+    flex-shrink: 0;
+    padding: 9px 13px;
+    border: 1px solid #b36aff;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #9333ea, #6b21a8);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px #9333ea35;
+}
+
+.details-btn:active {
+    transform: scale(.96);
+}
+
+@media (max-width: 380px) {
+    .app-card {
+        padding: 11px;
+        gap: 9px;
+    }
+
+    .app-icon {
+        width: 53px;
+        height: 53px;
+    }
+
+    .details-btn {
+        padding: 8px 9px;
+    }
+}
+
+/* Admin Dashboard */
+.admin-heading {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.admin-heading h1 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.admin-heading h1 span {
+    color: #c084fc;
+    text-shadow: 0 0 15px #9333ea;
+}
+
+.admin-heading p:last-child {
+    color: #aaa0b8;
+}
+
+.admin-panel {
+    margin: 18px 0;
+    padding: 20px;
+    background: #15111e;
+    border: 1px solid #493064;
+    border-radius: 14px;
+}
+
+.admin-panel h2 {
+    margin-bottom: 10px;
+}
+
+.admin-note {
+    color: #b9aec7;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 10px 0 16px;
+}
+
+#appForm label {
+    display: block;
+    color: #d8c7e8;
+    font-size: 13px;
+    margin: 15px 0 7px;
+}
+
+#appForm input,
+#appForm select,
+#appForm textarea {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background: #0e0a16;
+    border: 1px solid #493064;
+    border-radius: 8px;
+    font: inherit;
+}
+
+#appForm input:focus,
+#appForm select:focus,
+#appForm textarea:focus {
+    outline: none;
+    border-color: #a855f7;
+}
+
+.admin-submit {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    color: white;
+    background: #7e22ce;
+    border: 1px solid #c084fc;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Admin login and app management */
+[hidden] {
+    display: none !important;
+}
+
+.admin-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.admin-secondary {
+    padding: 10px 14px;
+    margin: 8px 6px 0 0;
+    color: #e9d5ff;
+    background: #241632;
+    border: 1px solid #7945a5;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.admin-app-item {
+    padding: 14px 0;
+    border-bottom: 1px solid #493064;
+}
+
+.admin-app-item h3 {
+    margin: 0 0 6px;
+    color: #e9d5ff;
+}
+
+.admin-app-item p {
+    color: #b9aec7;
+    font-size: 13px;
+}
+
+/* App Screenshots Gallery */
+.screenshots-section {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.screenshots-gallery {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 12px 2px;
+}
+
+.screenshots-gallery img {
+    width: 190px;
+    height: 340px;
+    object-fit: cover;
+    flex: 0 0 auto;
+    border-radius: 14px;
+    border: 1px solid #39304f;
+}
+
+
+/* Header buttons layout fix */
+.header {
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.header .brand {
+    min-width: 0;
+    flex: 1;
+}
+
+.header .telegram-btn {
+    flex-shrink: 0;
+}
+
+.dashboard-btn {
+    background: #7c3aed;
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 8px;
+        gap: 5px;
+    }
+
+    .header .logo {
+        font-size: 14px;
+    }
+
+    .header .brand-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .header .telegram-btn {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+}
